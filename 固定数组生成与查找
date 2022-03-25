@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main(){
+	printf("请输入十个数");
+	int arr[10];
+	int a;// 输入10个数，放入数组
+	for (a = 0; a<10; a++)
+	{
+		scanf("%d", &arr[a]);
+	}
+	int k = 7;
+	printf("需要寻找的数是：");
+	scanf("%d",&k);
+	int i = 0;
+	int sz = sizeof(arr) / sizeof(int);
+	for (i = 0; i < sz; i++){
+	if (k == arr[i])
+	{
+	printf("get it,the number is:%d\n", i);
+	break;
+	}
+	}
+	if (i == sz)
+		printf("can't,get it\n");
+	return 0;
+}
