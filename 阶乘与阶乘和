@@ -1,0 +1,33 @@
+	#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int jiecheng(int a)
+{
+	int c = 1;
+	int num=1;
+	do
+	{
+		num = num*c;
+		c++;
+	} while
+	(c <=a);
+	return num;
+}
+int jiechenghe(int x)
+{
+	int a = 1;
+	int b = 0;
+	do{
+		b = b + jiecheng(a);
+		a++;
+	} while (a <= x);
+	return b;
+}
+int main()
+{
+	int i;
+	printf("输入阶乘数\n");
+	scanf("%d", &i);
+	printf("阶乘等于%d\n", jiecheng(i));	
+	printf("阶乘和等于%d\n",jiechenghe(i));
+	return 0;
+}
