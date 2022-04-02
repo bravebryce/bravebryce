@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main(){
+	int a = 5 / 2;//号两边都是整数，执行的是整数除法，输出的是整数2
+	double b = 5 / 2.0;//输出的数是小数2.5
+	int c = 5 % 2;
+	int d = -1;
+	int e = d << 1;
+	int f = d >> 1;
+	int g = 3;
+	int h = 5;
+	int i = g&h;
+	int j = g | h;
+	printf("%d\n", a);
+	printf("%lf\n", b);
+	printf("%d\n", c);
+	printf("左移=%d\n", e);
+	printf("右移=%d\n", f);//移动的是补码
+	printf("按位与=%d\n", i);
+	printf("按位或=%d\n", j);
+	int x = 0;
+	int y = 0;
+	scanf("%d", &x);
+	scanf("%d", &y);
+	printf("%d\n", x);
+	printf("%d\n", y);
+	x = x^y;
+	y = x^y;
+	x = x^y;
+	printf("%d\n", x);
+	printf("%d\n", y);
+	return 0;
+}
